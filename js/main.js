@@ -1,26 +1,31 @@
+let btnGenerate = document.getElementById("generate");
+btnGenerate.addEventListener("click",
+    
+    function () {
+        event.preventDefault(); 
+        let name = document.getElementById("name").value;
+        console.log("Nome:", name);
 
-function TicketCompleted(event) {
-    event.preventDefault(); 
-    let name = document.getElementById("name").value;
-    let surname = document.getElementById("surname").value;
-    let age = document.getElementById("age").value;
-    let km = document.getElementById("km").value;
+        let lastname = document.getElementById("lastname").value;
+        console.log("Nome:", lastname);
 
-    document.getElementById("container_card").innerHTML = `
-    <div id="welcome_card" class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">${name} ${surname}</h5>
-        <p class="card-text">Benuto nel mio sito </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-`;
+        let age = document.getElementById("age").value;
+        console.log("Età:", age);
 
+        let km = document.getElementById("km").value;
+        console.log("Km:", km);
 
+        let ticketPrice = km * 0.21;
+        console.log("Il prezzo del biglietto sarà di", ticketPrice)
 
+        if (age == "Minorenne") {
+            ticketPrice = ticketPrice - (ticketPrice * 0.2);
+            console.log("Il prezzo per un minorenne sarà di", ticketPrice);
+        }
+        else if (age == "Over65") {
+            ticketPrice = ticketPrice - (ticketPrice * 0.4);
+            console.log("Il prezzo per un Over65 sarà di", ticketPrice);
+        }
 
-
-
-
-}
+    }
+)
