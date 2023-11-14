@@ -29,7 +29,6 @@ btnGenerate.addEventListener("click",
         }
 
         else if (age == "Maggiorenne") {
-            ticketPrice = ticketPrice
                console.log("Il prezzo standard sarà di" + " " + ticketPrice);
                document.getElementById('price').innerHTML = ticketPrice;
            }
