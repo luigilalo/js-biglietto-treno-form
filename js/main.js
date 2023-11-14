@@ -18,11 +18,11 @@ btnGenerate.addEventListener("click",
         let ticketPrice = km * 0.21;
 
         if (age == "Minorenne") {
-          ticketPrice = ticketPrice - (ticketPrice * 0.2);
+          let ticketMinor = ticketPrice - (ticketPrice * 0.2);
             console.log("Il prezzo per un minorenne sarà di" + " " + ticketMinor);
         }
         else if (age == "Over65") {
-            ticketPrice = ticketPrice - (ticketPrice * 0.2);
+            let ticketOver65 = ticketPrice - (ticketPrice * 0.4);
             console.log("Il prezzo per un Over65 sarà di" + " " + ticketOver65);
         }
     }
