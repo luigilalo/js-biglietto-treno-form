@@ -18,13 +18,21 @@ btnGenerate.addEventListener("click",
         let ticketPrice = km * 0.21;
 
         if (age == "Minorenne") {
-          ticketPrice = ticketPrice - (ticketPrice * 0.2);
-            console.log("Il prezzo per un minorenne sarà di" + " " + ticketPrice);
+           ticketPrice = ticketPrice - (ticketPrice * 0.2);
+           console.log("Il prezzo per un minorenne sarà di" + " " + ticketPrice);
+           document.getElementById('price').innerHTML = ticketPrice;
         }
         else if (age == "Over65") {
-            ticketPrice = ticketPrice - (ticketPrice * 0.4);
+         ticketPrice = ticketPrice - (ticketPrice * 0.4);
             console.log("Il prezzo per un Over65 sarà di" + " " + ticketPrice);
+            document.getElementById('price').innerHTML = ticketPrice;
         }
+
+        else if (age == "Maggiorenne") {
+            ticketPrice = ticketPrice
+               console.log("Il prezzo standard sarà di" + " " + ticketPrice);
+               document.getElementById('price').innerHTML = ticketPrice;
+           }
 
         let ticket = document.getElementById('ticket');
         ticket.classList.remove('d-none');
@@ -32,7 +40,7 @@ btnGenerate.addEventListener("click",
         document.getElementById('offer').innerHTML = age;
         document.getElementById('cab').innerHTML = Math.floor(Math.random() * 10) + 1;
         document.getElementById("codecp").innerHTML = Math.floor(Math.random() * 10000) + 90001;
-        document.getElementById('price').innerHTML = ticketPrice;
+    
 
     }
 )
