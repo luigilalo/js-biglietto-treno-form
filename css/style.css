@@ -3,3 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.italobg {background-color: rgb(164,29,33,255);}
+#italologo {width: 150px;}
